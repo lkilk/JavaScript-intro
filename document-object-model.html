@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .highlight {
+            background-color: yellow;
+            font-weight: bold; 
+        }
+        li{
+            font-size: 2em;
+            list-style-type: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>DOM</h1>
+    <p>All HTML elements are JavaScript objects.</p>
+    <p>The <span>document</span> object is the root of the DOM.</p>
+    <p>document methods for element referencing:</p>
+    <ul id="documentMethodList"> 
+        <li>getElementsByTagName</li> 
+        <li>getElementsByClassName</li> 
+        <li>getElementById</li> 
+        <li>querySelector</li>
+    </ul>
+    <table id="elementPropertyList">
+        <tr>
+            <td>PROPERTY</td>
+            <td>DESCRIPTION</td>
+        </tr>
+        <tr>
+            <td>innerHTML</td> 
+            <td>Element content</td>
+        </tr> 
+        <tr>
+            <td>style</td>
+            <td>The element's style object</td> 
+        </tr>
+    </table>
+    <script>
+        // header changes
+        var header = document.querySelector('h1');
+        header.innerHTML = "Document Object Model (DOM)";
+        // body changes
+        var body = document.querySelector('body');
+        body.style.fontFamily = "Arial, Helvetica, sans-serif"
+        // span (an inline text tag) changes
+        var span = document.querySelector('span');
+        span.classList.add('highlight');
+        // <li> tags attribute
+        var list = document.querySelector('ul');
+        list.setAttribute('type', 'square');
+        // selecting the 3rd child of the unorderd list <ul> parent <li> child
+        alert(list.children[2].innerHTML);
+        // new table row element
+        var tableRow = document.createElement('tr');
+        var propertyCell = document.createElement('td');
+        var descriptionCell = document.createElement('td');
+        propertyCell.innerHTML = 'classList';
+        descriptionCell.innerHTML = 'An array of classes';
+        tableRow.appendChild(propertyCell);
+        tableRow.appendChild(descriptionCell);
+        document.querySelector('table').appendChild(tableRow);
+        // loop round all table cells applying padding
+        var allCells = document.querySelectorAll('td');
+        for(var cell of allCells){
+        cell.style.padding = '10px';
+        }
+    </script>
+</body>
+</html>

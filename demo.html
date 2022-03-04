@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>Exercise 1</h1>
+        <h2>Dynamism and Interactivity</h2>
+        <label for="name">Name:</label><input type="text" id="name">
+        <button id="submit">Submit</button>
+        <p id="welcome"></p>
+
+        <script>
+            function getAndDisplayName() {
+                var name = document.querySelector('#name').value;
+                document.querySelector('#welcome').innerHTML = 
+                    "Welcome to my site, " + name;
+            }
+            document.querySelector('#submit').addEventListener(
+                "click", getAndDisplayName
+                ); //callback pattern
+        </script>
+        <noscript>
+            <p>code here only shown if jS turned off</p>
+        </noscript>
+    </body>
+</html>
+

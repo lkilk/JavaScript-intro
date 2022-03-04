@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank Account</title>
+</head>
+<body>
+    <h1>Bank Account Class</h1>
+
+    <script>
+        class Account{
+            constructor(name, number, balance){ 
+                this.name = name;
+                this.number = number;
+                this.balance = balance; 
+                } 
+            
+            deposit = function(amount){
+                this.balance += amount ;
+            }
+
+            withdraw = function(amount){
+                this.balance -= amount; 
+            }
+
+            display = function(){
+                alert(`
+                Account Name: ${this.name}
+                Account number: ${this.number}
+                Account Balance: ${this.balance.toFixed(2)}
+                `);
+            }
+        }
+
+        var a1 = new Account("Bill", 1001, 50);
+        var a2 = new Account("Ted", 1002, 100);
+        
+        a1.deposit(100);
+        a2.deposit(100);
+
+        a1.display();
+        a2.display();
+
+
+
+
+
+    </script>
+    
+</body>
+</html>

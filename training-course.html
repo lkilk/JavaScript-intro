@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Training Course</title>
+</head>
+<body>
+    <h1>Training Course</h1>
+
+    <script>
+
+        let trainees = [
+            "Liam",
+            "Chesca",
+            "Rob",
+            "Emily",
+            "Matt",
+            "Jay",
+            "Will",
+            "Oisin",
+            "Khalid",
+            "Lewis",
+        ];
+
+        let allTrainees = "";
+
+        for (let name of trainees) {
+            allTrainees += name + "\n";
+        }
+
+        alert(allTrainees);
+
+        trainees.push("Alan");
+        trainees.sort();
+        
+        let findme = trainees.indexOf("Liam"); // returns the idex of where liam is is the variable find me
+
+        let liam = trainees.splice(findme, 1); // i am now passing the index as the first argument, number of elements is 1 as I only want to remove 1 name
+
+        let allTrainees = "";
+
+   //    trainees.forEach((el) => (allTrainees += el + ", "));
+
+       alert(allTrainees);
+
+    </script>
+    
+</body>
+</html>

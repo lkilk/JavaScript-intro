@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <h1>Calculator</h1>
+    <script>
+        let firstNum = Number(prompt('Enter the first number'))
+        let secondNum = Number(prompt('Enter the second number'))
+        let operator = prompt('Select an operator (+ - / *)')
+
+        let result = 0
+        
+        switch(operator){ 
+            case "+": 
+                result = firstNum + secondNum;
+                break;
+            case "-":
+                result = firstNum - secondNum;
+                break;
+            case "/":
+                result = firstNum / secondNum;
+                break;
+            case "*":
+                result = firstNum * secondNum;
+                break;
+            default: 
+                alert('choose an operator + - / *');
+        }
+
+        alert(` ${firstNum} ${operator} ${secondNum} = ${result}`)
+        
+    </script>
+</body>
+</html>

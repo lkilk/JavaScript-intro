@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <style>
+        /* #para,  */
+        #show-button{
+		    display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Accordion</h1>
+    <button id="hide-button">HIDE...</button>
+    
+    <p id="para">
+    You know what? It is beets. I've crashed into a beet truck. Hey, you know how I'm, like, always trying to save the planet? Here's my chance. Eventually, you do plan to have dinosaurs on your dinosaur tour, right? God creates dinosaurs. God destroys dinosaurs. God creates Man. Man destroys God. Man creates Dinosaurs.
+    </p>
+    <button id="show-button">SHOW...</button>
+    <script>
+        var para = document.querySelector('#para');
+        var hideButton = document.querySelector('#hide-button');
+        var showButton = document.querySelector('#show-button');
+
+        showButton.addEventListener('click', function(){
+            para.style.display = 'block';
+            hideButton.style.display = 'block';
+            this.style.display = 'none';
+        })
+
+        hideButton.addEventListener('click', function(){
+            para.style.display = 'none';
+            this.style.display = 'none';
+            showButton.style.display = 'block';
+        })
+    </script>
+</body>
+</html>

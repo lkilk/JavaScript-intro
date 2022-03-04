@@ -1,0 +1,108 @@
+09:30 start
+
+11:00 15min break am
+
+12:30 LUNCH
+
+1:30 END LUNCH
+
+3:00 break pm
+
+4:30 Q&A 1-to-1
+
+5:00 FINISH
+
+we are in the game of not knowing stuff
+
+do not expect to retain everything on this course
+
+get, if possible a day or more next week to consolidate this with your tem lead/buddy
+
+during the course, you may email me for overnight code review:
+
+alanl@stayahead.com
+Cc:
+alan@alanlavender.com
+
+repo for this course:
+
+REPO - GOOGLE DRIVE
+https://tinyurl.com/JS1-FEB22-1
+
+RECAP DAY1
+
+JS typical use case:
+
+    take input from a text field
+    do something with JS
+    return modified output to the web page
+
+    considerations:
+    TIMING, TIMING, TIMING
+    if elements in the page are referenced in the script
+    it WILL FAIL if it runs before the page has drawn
+    so script tags after all HTML elements
+    just before </body>
+
+script placement
+    linked, local, inline
+        linked scripts handiest site-wide
+        they cache on first load
+        they may be prone to timing errors
+    local overrides linked
+    inline overrides local and linked
+    inline is nor best practice for source code
+    harder to refactor/maintain
+    you will see a lot of inlining in production code
+    this is because another script put it there to override everything elses
+
+variables - huge section
+
+    declaring (then they come back as undefined)
+    assignment (cannot be done separately for const)
+    initialisation - declaration and assignment in one line (must be done this way for const)
+
+    keywords:
+    var
+        can be re-declared
+        can be re-assigned
+        in which case it remembers previous value
+        puts a prop on the global or window object
+        is function-scoped (see functions section)
+    let
+        cannot be re-declared
+        can be re-assigned
+        does not put prop on global object
+        is block-scoped
+    const
+        cannot be re-declared or re-assigned (at top level)
+        must be initialised
+        does not put prop on global object
+        is block-scoped
+        ** if const is assigned a reference,
+        internal values may be re-assigned through the reference**
+
+variables and operators:
+    order of precedence
+    brackets to change this
+    boolean expressions (evaluate to true or false and use operators like <=)
+    the truthiness/falsiness inherent in JS values
+    eg Boolean('') // false Boolean('x') // true
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

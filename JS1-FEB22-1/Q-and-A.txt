@@ -1,0 +1,23 @@
+
+[14:54] Philip Carr
+so because the header is rendered after the alert, 
+do you want us to put in a button to display the alert?
+
+no need for this, but you have discovered the behaviour that the exercise
+asks questions of at the end
+The script runs first in this instance
+even before the header or indeed anything else is rendered
+
+[11:47] Croston Darrell DIGITAL GROUP
+What is the reason for the prompt function not parsing in Node inside the Visual Studio when I attempt to execute i.e. node calculator.js but parses and test ok in the browser?
+
+[13:28] Alan Lavender
+Darrell, the prompt() function is a property of the Window object i.e. the browser. There is
+
+[13:28] Alan Lavender
+There are workarounds in Node here are two of them:
+
+https://nodejs.org/api/readline.html
+https://www.npmjs.com/package/prompt-sync
+
+

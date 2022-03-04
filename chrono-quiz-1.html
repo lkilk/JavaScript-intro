@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+</head>
+<body>
+    <script>
+        let q1 = ('In what year did the Titanic sink on her maiden voyage?')
+        let q2 = ('In what year did WW1 begin?')
+        let q3 = ('In what year was the Qualification of Women act passed')
+
+        let a1 = '1912'
+        let a2 = '1914'
+        let a3 = '1918'
+
+        for(let i = 1; i <= 3; i++) {
+            switch(i){ 
+            case 1: 
+                guess1 = prompt(q1)
+                if (guess1 == a1){
+                    alert('Correct!')
+                }else{
+                    alert(`Wrong! it was ${a1}`)
+                }
+                break;
+            case 2:
+                guess2 = prompt(q2)
+                if (guess2 == a2){
+                    alert('Correct!')
+                }else{
+                    alert(`Wrong! it was ${a2}`)
+                }
+                break;
+            case 3:
+                guess3 = prompt(q3)
+                if (guess3 == a3){
+                    alert('Correct!')
+                }else{
+                    alert(`Wrong! it was ${a3}`)
+                }
+                break;
+        }
+    }
+
+
+
+    </script>
+</body>
+</html>

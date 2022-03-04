@@ -1,0 +1,20 @@
+These characters map directly 
+from the MacBook EN-British keyboard 
+to the StayAhead Win10 VM:
+
+@
+€
+£
+`		
+"
+'
+/
+\
+|
+&
+^
+// all the same mappings to mac for keyboard EN-British
+
+€#		// alt + 2 + 3
+
+#		// hold down BOTH alt keys!

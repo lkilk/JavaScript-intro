@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>INPUT LISTENER</title>
+  </head>
+  <style>
+    #counter {
+      width: 3em;
+      height: 2em;
+      background: lightblue;
+      border-radius: 0.25em;
+      color: #666;
+      font-size: 2rem;
+      font-family: Arial, Helvetica, sans-serif;
+      font-weight: 700;
+      text-align: center;
+      line-height: 2em;
+    }
+    #tweet {
+      margin-top: 1em;
+    }
+  </style>
+  <body>
+    <!-- Adapted from MDN: https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/addEventListener -->
+
+    <textarea
+      id="comment"
+      placeholder="What's happening?"
+      rows="4"
+      cols="70"
+    ></textarea>
+    <div id="counter">280</div>
+    <button id="tweet">TWEET</button>
+
+    <script>
+      // add event listener to textarea
+      var textarea = document.querySelector("#comment");
+      textarea.addEventListener("input", countDown);
+      var button = document.querySelector("button");
+      // Function to countdown characters
+      function countDown() {
+        //   console.log(textarea.value.length)//testing
+        var count = textarea.value.length;
+        var counter = document.querySelector("#counter");
+        if (!(280 - count > 0)) {
+          // we've gone into more than 280 chars
+          // needs a toggle/reset if user deletes
+          counter.style.background = "darkred";
+          counter.style.color = "white";
+          counter.innerHTML = "! " + (280 - count);
+          button.setAttribute("disabled", true);
+          //toggle here
+        } else if (280 - count > 0) {
+          // less than 280 again
+          counter.style.background = "lightblue";
+          counter.style.color = "#666";
+          counter.innerHTML = 280 - count;
+          button.disabled = false;
+        }
+      }
+    </script>
+  </body>
+</html>

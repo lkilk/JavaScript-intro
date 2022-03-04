@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DEMO</title>
+  </head>
+  <body>
+    <!-- elements HERE -->
+    <h1>JAVASCRIPT DEMO</h1>
+    <label for="name">Name:</label><input type="text" id="name" />
+    <button id="submit">SUBMIT</button>
+    <p id="welcome"></p>
+    <!-- script HERE (AFTER) -->
+    <script>
+      //TODO
+      function getAndDisplayName() {
+        var name = document.querySelector("#name").value;
+        document.querySelector("#welcome").innerHTML =
+          "Welcome to my site, " + name;
+        // String concatenation
+      } // end function
+      // TODO: hook up function to SUBMIT button
+      document
+        .querySelector("#submit")
+        .addEventListener("click", getAndDisplayName);
+    </script>
+  </body>
+</html>
